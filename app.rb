@@ -9,3 +9,9 @@ get '/cat' do
 	@name = ["Oscar", "Kitty", "Zoe"].sample
 	erb :index
 end
+
+get '/named-cat' do
+	p params
+  @name = params[:name]
+  erb :index
+end
